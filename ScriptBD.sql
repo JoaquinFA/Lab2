@@ -35,8 +35,23 @@ Begin
 	Delete from Video WHERE idVideo=@idVideo;
 END
 
+create procedure sp_video_vervideos
+@idVideo int
+AS
+BEGIN
+	Select * from Video 
+END
 
 select * from Video
 execute sp_video_insertar 1,'Hola',1000,'fdgfhtf'
 execute sp_video_modificar 1,'Holaaa',1000,'aaaaa'
 execute sp_video_eliminar 1
+execute sp_video_vervideos 1
+ 
+
+ create procedure sp_video_buscar
+@idVideo int
+AS
+BEGIN
+	Select * from Video 
+END

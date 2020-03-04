@@ -10,8 +10,16 @@
   <meta name="keywords" content="ASP.NET,MVC,FACPYA">
   <meta name="author" content="Joaquin Flores">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
 </head>
 <body>
-    <h1> Video Registrados</h1>
+    <h1>Lista de Videos</h1>
+    <p>Hay<%:((System.Data.DataTable)ViewData["datavideo"]).Rows.Count %> videos </p>
+    <br />
+    <% foreach (System.Data.DataRow ren in ((System.Data.DataTable)ViewData["datavideo"]).Rows)
+    {%>
+    <p><%: ren["titulo"].ToString() %> </p>
+    <iframe width="560" height="315" src= "<%: ren["url"].ToString() %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture; picture-in-picture" allowfulscreen></iframe>
+    <% }%>
 </body>
 </html>

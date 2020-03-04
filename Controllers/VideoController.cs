@@ -14,8 +14,8 @@ namespace MVCLaboratorio.Controllers
         // GET: /Video/
 
         public ActionResult Index()
-        {
-            return View();
+        {         
+           return View();
         }
         public ActionResult Create()
         {
@@ -59,6 +59,18 @@ namespace MVCLaboratorio.Controllers
             Parametros.Add(new SqlParameter("@url", url));
             BaseHelper.ejecutarSentencia("sp_video_modificar", CommandType.StoredProcedure, Parametros);
             return RedirectToAction("Index", "Video");
+        }
+        public ActionResult Search()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Search(int idVideo)
+        {
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
+            ViewData["datavideo"] = BaseHelper.ejecutarConsulta("sp_video_buscar", CommandType.StoredProcedure, parametros);
+            return View("Resultado");
         }
 
     }

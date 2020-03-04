@@ -10,15 +10,19 @@
   <meta name="keywords" content="ASP.NET,MVC,FACPYA">
   <meta name="author" content="Joaquin Flores">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
 </head>
 <body>
     <h1>Menu de Opciones</h1>
     <a href="/Video/Create">Agregar Video</a>
     <br />
     <br />
+    <a href="/Video/Edit">Editar Video</a>
+    <br />
+    <br />  
     <a href="/Video/Delete">Eliminar Video</a>
     <br />
     <br />  
-    <a href="/Video/Edit">Editar Video</a>
+    <a href="/Video/Search">Buscar Videos </a>
 </body>
 </html>

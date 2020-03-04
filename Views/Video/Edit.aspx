@@ -10,7 +10,7 @@
   <meta name="keywords" content="ASP.NET,MVC,FACPYA">
   <meta name="author" content="Joaquin Flores">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  </meta>
    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
