@@ -17,5 +17,8 @@
     <br />
     <br />
     <a href="/Video/Delete">Eliminar Video</a>
+    <br />
+    <br />  
+    <a href="/Video/Edit">Editar Video</a>
 </body>
 </html>
